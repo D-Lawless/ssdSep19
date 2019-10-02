@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GolfStore</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="headSec">
+      <h1>My Golf Application!</h1>
+      <ul>
+        <li><%= link_to "Home", "/" %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Help", help_path %></li>
+      </ul>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="footer"> <h1>Look I'm at the bottom...</h1></footer>
+  </body>
+</html>
